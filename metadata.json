@@ -1,0 +1,6 @@
+{
+  "name": "Clash Royale MetaPredict AI",
+  "description": "Plataforma de inteligencia artificial para la predicción y análisis del metajuego de Clash Royale con datos históricos de 2023-2026.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

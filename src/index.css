@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  background-color: #0F172A;
+  color: #ffffff;
+  font-family: var(--font-sans);
+}
+
+/* Vibrant Palette custom utility classes */
+.vibrant-header-gradient {
+  background: linear-gradient(to bottom, #1E40AF, #1E3A8A);
+}
+
+.vibrant-navbar-bg {
+  background-color: #1E293B;
+}
+
+.vibrant-card-bg {
+  background-color: #1E293B;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.vibrant-yellow-btn {
+  background-color: #F59E0B;
+  color: #1E3A8A;
+  font-weight: 900;
+  border-bottom: 4px solid #B45309;
+}
+.vibrant-yellow-btn:hover {
+  background-color: #FBBF24;
+}
+.vibrant-yellow-btn:active {
+  border-bottom-width: 0px;
+  transform: translateY(4px);
+}
+
+.vibrant-blue-btn {
+  background-color: #2563EB;
+  color: #ffffff;
+  font-weight: 900;
+  border-bottom: 4px solid #1D4ED8;
+}
+.vibrant-blue-btn:hover {
+  background-color: #3B82F6;
+}
+.vibrant-blue-btn:active {
+  border-bottom-width: 0px;
+  transform: translateY(4px);
+}
+
+.vibrant-card-outer {
+  border-radius: 0.75rem;
+  padding: 0.25rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  border: 2px solid #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.vibrant-card-inner {
+  background-color: rgba(15, 23, 42, 0.95);
+  height: 100%;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.vibrant-cost-bubble {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  background-color: #9333EA;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 9999px;
+  border: 1px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 0.75rem;
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Custom gorgeous Clash Royale inspired game gradients & badges */
+.cr-gradient-bg {
+  background: radial-gradient(circle at top, #1E3A8A 0%, #0F172A 100%);
+}
+
+.cr-card-gold {
+  border: 2px solid #FBBF24;
+  background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+}
+
+.cr-glow-red {
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.35);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FBBF24;
+}
