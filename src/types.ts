@@ -94,3 +94,36 @@ export interface ModelMetricsData {
     description: string;
   };
 }
+
+export interface PlayerCard {
+  id: string;
+  name: string;
+  level: number;
+  maxLevel: number;
+  count: number;
+}
+
+export interface PlayerProfile {
+  name: string;
+  tag: string;
+  expLevel: number;
+  trophies: number;
+  bestTrophies: number;
+  wins: number;
+  losses: number;
+  threeCrownWins: number;
+  warDayWins: number;
+  clan?: {
+    name: string;
+    tag: string;
+  };
+  currentDeck: PlayerCard[];
+  cards: PlayerCard[];
+  history: { season: string; trophies: number }[];
+  projections: {
+    nextSeasons: { season: string; predictedTrophies: number }[];
+    goldNeeded: number;
+    completionPercent: number;
+    recommendedDeck: string[];
+  };
+}

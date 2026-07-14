@@ -4,6 +4,7 @@ import DeckPredictor from "./components/DeckPredictor";
 import PatchSimulator from "./components/PatchSimulator";
 import HistoryTrends from "./components/HistoryTrends";
 import ModelWorkbench from "./components/ModelWorkbench";
+import PlayerProfileViewer from "./components/PlayerProfileViewer";
 import {
   Trophy,
   Swords,
@@ -23,7 +24,7 @@ import {
 
 export default function App() {
   const [cards, setCards] = useState<Card[]>([]);
-  const [activeTab, setActiveTab] = useState<"dashboard" | "predictor" | "simulator" | "history" | "workbench">("dashboard");
+  const [activeTab, setActiveTab] = useState<"dashboard" | "predictor" | "simulator" | "history" | "workbench" | "profile">("dashboard");
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -122,6 +123,15 @@ export default function App() {
               }`}
             >
               Métricas IA
+            </button>
+            <button
+              id="nav-tab-profile"
+              onClick={() => setActiveTab("profile")}
+              className={`px-4 py-2 rounded-lg text-xs font-display font-bold uppercase transition-all ${
+                activeTab === "profile" ? "bg-[#FBBF24] text-[#1E3A8A] shadow-md border-b-2 border-amber-600" : "text-blue-100 hover:text-white hover:bg-white/5"
+              }`}
+            >
+              Buscador de Perfiles
             </button>
           </nav>
         </div>
@@ -295,7 +305,7 @@ export default function App() {
                             )}
                             
                             <div className="absolute top-1 left-1 bg-purple-600 w-6 h-6 rounded-full border border-white flex items-center justify-center font-black text-[10px] text-white shadow">
-                              {c.elixirCost}
+                              {c.elixir}
                             </div>
 
                             <div className="flex-1 flex items-center justify-center text-4xl select-none pt-4">
@@ -344,6 +354,8 @@ export default function App() {
             {activeTab === "history" && <HistoryTrends cards={cards} />}
 
             {activeTab === "workbench" && <ModelWorkbench />}
+
+            {activeTab === "profile" && <PlayerProfileViewer cards={cards} />}
           </>
         )}
       </main>
